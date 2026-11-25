@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.chavixq.ltbetav1.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["SignLeakMixin", "CameraMixin", "NoFallMixin"],
+  "injectors": { "defaultRequire": 1 }
+}
