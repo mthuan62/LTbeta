@@ -31,8 +31,8 @@ public class LTClient implements ClientModInitializer {
             }
         });
 
-        HudRenderCallback.EVENT.register((context, tickDelta) -> {
-            ModuleManager.INSTANCE.onRenderHUD(context, tickDelta);
+        HudRenderCallback.EVENT.register((context, tickCounter) -> {
+            ModuleManager.INSTANCE.onRenderHUD(context, tickCounter);
             dev.chavixq.ltbetav1.utils.HUDUtils.drawArrayList(context);
         });
     }

@@ -2,6 +2,7 @@ package dev.chavixq.ltbetav1.core;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.util.math.MatrixStack;
 
 public abstract class Module {
@@ -22,5 +23,5 @@ public abstract class Module {
     public void onDisable() {}
     public void onTick() {}
     public void onRender(MatrixStack matrices, float tickDelta) {}
-    public void onRenderHUD(DrawContext context, float tickDelta) {}
+    public void onRenderHUD(DrawContext context, RenderTickCounter tickCounter) {} 
 }

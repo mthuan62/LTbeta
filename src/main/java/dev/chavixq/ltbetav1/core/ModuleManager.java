@@ -6,6 +6,7 @@ import dev.chavixq.ltbetav1.modules.player.*;
 import dev.chavixq.ltbetav1.modules.combat.*;
 import dev.chavixq.ltbetav1.modules.misc.*;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.util.math.MatrixStack;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,5 +49,5 @@ public class ModuleManager {
 
     public void onTick() { for (Module m : modules) if (m.isEnabled()) m.onTick(); }
     public void onRender(MatrixStack matrices, float tickDelta) { for (Module m : modules) if (m.isEnabled()) m.onRender(matrices, tickDelta); }
-    public void onRenderHUD(DrawContext context, float tickDelta) { for (Module m : modules) if (m.isEnabled()) m.onRenderHUD(context, tickDelta); }
+    public void onRenderHUD(DrawContext context, RenderTickCounter tickCounter) { for (Module m : modules) if (m.isEnabled()) m.onRenderHUD(context, tickCounter); }
 }

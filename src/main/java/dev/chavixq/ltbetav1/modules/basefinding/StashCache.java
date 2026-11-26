@@ -7,6 +7,7 @@ import dev.chavixq.ltbetav1.utils.RenderUtils;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -62,7 +63,7 @@ public class StashCache extends Module {
         }
     }
 
-    @Override public void onRenderHUD(DrawContext context, float tickDelta) {
+    @Override public void onRenderHUD(DrawContext context, RenderTickCounter tickCounter) {
         if (mc.player == null || cache.isEmpty()) return;
         Vec3d playerPos = mc.player.getPos();
         double maxDistSq = maxDistance * maxDistance;

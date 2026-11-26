@@ -10,6 +10,9 @@ import org.joml.Matrix4f;
 public class RenderUtils {
     public static final RenderLayer LINES_LAYER = RenderLayer.of(
             "lt_lines",
+            1536, 
+            false, 
+            false,
             RenderLayer.MultiPhaseParameters.builder()
                     .pipeline(RenderPipelines.LINES)
                     .transparency(RenderPhase.TRANSLUCENT_TRANSPARENCY)
